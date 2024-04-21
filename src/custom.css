@@ -115,6 +115,7 @@ a {
   background-color: white;
   border: 1px solid white;
   color: #1e1e1e;
+  text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -122,6 +123,7 @@ a {
   background-color: white;
   border: 1px solid white;
   color: #0000ff;
+  text-decoration: none;
   padding-bottom: 7px;
   border-bottom: 1px solid #0000ff;
 }
@@ -131,4 +133,3 @@ a {
   padding-bottom: 7px;
   border-bottom: 1px solid #0000ff;
 }
-

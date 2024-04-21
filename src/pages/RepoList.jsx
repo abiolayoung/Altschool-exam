@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import { motion } from "framer-motion";
-import { Container, Pagination} from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { Container, Pagination } from "react-bootstrap";
 import AB from "../assets/AB.jpg";
 import axios from "axios";
 
@@ -90,11 +91,11 @@ const RepoList = () => {
         className="container text-center"
         style={{ width: "100%", margin: "0 auto", marginTop: "4%" }}
       >
-        <div className="row row-cols-3">
+        <div className="row row-cols-1 row-cols-md-3">
           {repos.map((repo) => (
-            <div className="col" key={repo.id}>
+            <div className="col mb-4" key={repo.id}>
               <div
-                className="card mb-3"
+                className="card p-4"
                 style={{
                   boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
                   transition: "0.3s",
@@ -102,12 +103,9 @@ const RepoList = () => {
               >
                 <h5 className="card-title">{repo.name}</h5>
                 <p className="card-text">{repo.description}</p>
-                <a
-                  href={`/single-repo/${repo.id}`}
-                  className="btn btn-secondary"
-                >
-                  View Repo
-                </a>
+                <Link to={`/repos/${repo.name}`}>
+                  <button className="btn btn-secondary">View Repo</button>
+                </Link>
               </div>
             </div>
           ))}

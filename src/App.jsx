@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
       <Route path="/" element={<RepoList />} />
-      <Route path="/single-repo" element={<SingleRepo />} />
+      <Route  path="/repos/:repoName" element={<SingleRepo />} />
       <Route path="/404" element={<FourOhFour />} />
       </Routes>
       </BrowserRouter>

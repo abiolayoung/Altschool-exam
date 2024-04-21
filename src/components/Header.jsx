@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "react-bootstrap";
 import { NavLink, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import Logo from "../assets/Logo.png";
@@ -45,31 +44,22 @@ const Header = () => {
           <button className="btn-sample" style={{ marginRight: "25px" }}>
             <NavLink
               className={`transparent-btn ${
-                location.pathname === "/about-us" ? "active" : ""
+                location.pathname === "/" ? "active" : ""
               }`}
-              to="/single-repo"
+              to="/"
             >
-              Single Repo
+              My Repos
             </NavLink>
           </button>
           <button className="btn-sample" style={{ marginRight: "30px" }}>
             <NavLink
               className={`transparent-btn ${
-                location.pathname === "/contact-us" ? "active" : ""
+                location.pathname === "/404" ? "active" : ""
               }`}
               to="/404"
             >
               404
             </NavLink>
-          </button>
-          <button
-            className="secondary-btn"
-            style={{ marginRight: "15px" }}
-          >
-            Log in
-          </button>
-          <button className="primary-btn">
-            Get Started
           </button>
         </div>
         <div className="d-lg-none">
@@ -97,8 +87,8 @@ const Header = () => {
                 }}
               >
                 <button className="btn-sample" style={{ marginBottom: "30px" }}>
-                  <NavLink className="transparent-btn" to="/single-repo">
-                    Single Repo
+                  <NavLink className="transparent-btn" to="/">
+                    My Repos
                   </NavLink>
                 </button>
                 <button className="btn-sample" style={{ marginBottom: "35px" }}>
@@ -106,18 +96,6 @@ const Header = () => {
                     404
                   </NavLink>
                 </button>
-                <button
-                  className="secondary-btn w-100"
-                  style={{ marginBottom: "20px" }}
-                >
-                  Log in
-                </button>
-                <Button
-                  className="primary-btn w-100"
-                  style={{ marginBottom: "20px" }}
-                >
-                  Get Started
-                </Button>
               </div>
             </>
           ) : (
